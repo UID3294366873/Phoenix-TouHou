@@ -1,0 +1,33 @@
+[
+	{"anchor": "start"},
+	{
+		"choices": [
+			{"text": "A:关于灵梦", "goto": "选项A"},
+			{"text": "B:博丽神社", "goto": "选项B"},
+			{"text": "C:巫女", "goto": "选项C"}
+		]
+	},
+	{"anchor": "选项A"},
+	{"speaker": "Phoenix", "text": "没记错的话，灵梦小姐就是这间神社的巫女吧"},
+	{"speaker": "Reimu", "text": "嗯，没错，这里基本上是我一个人管理"},
+	{"goto": "start"},
+
+	{"anchor": "选项B"},
+	{"speaker": "Phoenix", "text": "博丽神社是一间什么样的神社？"},
+	{"speaker": "Mayoi", "text": "啊对了对了，说到神社，寄住在这里的神灵是谁？"},
+	{"speaker": "Reimu", "text": "唔…………博丽神社拜的神是什么来着…………"},
+	{"speaker": "Reimu", "text": "说实话，我也不清楚"},
+	{"speaker": "Reimu", "text": "这种事情差不多就可以了吧"},
+	{"speaker": "Phoenix", "text": "（这样的神社，会有人来吗）"},
+	{"goto": "start"},
+
+	{"anchor": "选项C"},
+	{"speaker": "Mayoi", "text": "巫女平时会做些什么呢？"},
+	{"speaker": "Mayoi", "text": "果然是修行之类的吗，会不会在瀑布下打坐呢"},
+	{"speaker": "Reimu", "text": "和你说的差不多，就是稍微有点偏差"},
+	{"speaker": "Reimu", "text": "主要的工作是在神社里喝茶"},
+	{"speaker": "Phoenix", "text": "（这样的神社，会有人来吗）"},
+	{"goto": "start"},
+
+	{"anchor": "end"},
+]

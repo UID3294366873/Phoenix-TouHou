@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ccgw42kywjql0"]
+
+[ext_resource type="Theme" uid="uid://dhvnxo3fldh2h" path="res://resources/themes/choice_button.tres" id="1_40y2d"]
+
+[node name="Button" type="Button" unique_id=1877597256]
+custom_minimum_size = Vector2(700, 50)
+theme = ExtResource("1_40y2d")
+keep_pressed_outside = true
+text = "this is a choice button"
