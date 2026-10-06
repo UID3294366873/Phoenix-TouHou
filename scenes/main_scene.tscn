@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bmhetpdclx3co"]
+
+[ext_resource type="Script" uid="uid://dilb48td24e7o" path="res://scripts/main_scene.gd" id="1_pu3yx"]
+[ext_resource type="Texture2D" uid="uid://dahrmuexyyq5o" path="res://assets/images/courtroom.png" id="2_gubc5"]
+[ext_resource type="AudioStream" uid="uid://6ya4i0ljlwr4" path="res://resources/blip_sounds/sfx-dink.wav" id="2_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://dq3sc1pxlc2oi" path="res://scenes/character.tscn" id="3_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://c5bg4pih04ipo" path="res://scenes/dialog_ui.tscn" id="4_c16ls"]
+
+[node name="MainScene" type="Node2D" unique_id=294691437]
+script = ExtResource("1_pu3yx")
+
+[node name="DialogPauseTimer" type="Timer" parent="." unique_id=1974897596]
+wait_time = 0.25
+one_shot = true
+
+[node name="NextSentenceSound" type="AudioStreamPlayer" parent="." unique_id=2066443756]
+stream = ExtResource("2_rt2n2")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1360112692]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="Background" unique_id=780740081]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gubc5")
+
+[node name="CharacterAndUI" type="CanvasLayer" parent="." unique_id=346307425]
+
+[node name="CharacterControl" type="Control" parent="CharacterAndUI" unique_id=1934235808]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharacterSprite" parent="CharacterAndUI/CharacterControl" unique_id=1935932476 instance=ExtResource("3_rt2n2")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(4, -259)
+scale = Vector2(1.5, 1.5)
+
+[node name="DialogUI" parent="CharacterAndUI" unique_id=1214269744 instance=ExtResource("4_c16ls")]

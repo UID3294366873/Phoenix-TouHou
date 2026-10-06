@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://c5bg4pih04ipo"]
+
+[ext_resource type="Theme" uid="uid://b256b6hld7nk0" path="res://resources/themes/dialog_box_theme.tres" id="1_edwrk"]
+[ext_resource type="Script" uid="uid://j5rf8wbg0df1" path="res://scripts/dialog_ui.gd" id="2_avaca"]
+[ext_resource type="FontFile" uid="uid://cw5w8on4xht6w" path="res://assets/字体样式/hanyifangzhuanu.ttf" id="3_8nsh5"]
+[ext_resource type="Script" uid="uid://b72ifcxcnq14g" path="res://scripts/text_blip_sound.gd" id="3_avaca"]
+[ext_resource type="PackedScene" uid="uid://ccgw42kywjql0" path="res://scenes/player_choice.tscn" id="4_8nsh5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_akcu8"]
+font = ExtResource("3_8nsh5")
+font_size = 25
+
+[node name="DialogUI" type="Control" unique_id=1214269744]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_edwrk")
+script = ExtResource("2_avaca")
+
+[node name="SentencePauseTimer" type="Timer" parent="." unique_id=1850509193]
+wait_time = 0.35
+one_shot = true
+
+[node name="TextBlipSound" type="AudioStreamPlayer" parent="." unique_id=365174101]
+max_polyphony = 2
+script = ExtResource("3_avaca")
+
+[node name="ChoicesContainer" type="CenterContainer" parent="." unique_id=2010132204]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoicesContainer" unique_id=1516050960]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Button" parent="ChoicesContainer/ChoiceList" unique_id=1877597256 instance=ExtResource("4_8nsh5")]
+layout_mode = 2
+
+[node name="DialogBox" type="PanelContainer" parent="." unique_id=1132176613]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogLine" type="RichTextLabel" parent="DialogBox" unique_id=593349409]
+layout_mode = 2
+bbcode_enabled = true
+text = "this  is a line of dialog"
+scroll_active = false
+
+[node name="SpeakerBox" type="Control" parent="." unique_id=1287167927]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = -150.0
+grow_vertical = 0
+
+[node name="SpeakerBox" type="Polygon2D" parent="SpeakerBox" unique_id=725058860]
+color = Color(0.1764706, 0.33333334, 0.90588236, 1)
+polygon = PackedVector2Array(0, 0, 180, 0, 200, 50, 0, 50)
+
+[node name="SpeakerName" type="Label" parent="SpeakerBox" unique_id=1732837028]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -11.5
+offset_right = 23.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name名字"
+label_settings = SubResource("LabelSettings_akcu8")
+
+[node name="Cursor" type="Control" parent="." unique_id=359557054]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Cursor" type="Polygon2D" parent="Cursor" unique_id=85012214]
+position = Vector2(-20, -20)
+polygon = PackedVector2Array(0, 0, 40, 20, 0, 40)

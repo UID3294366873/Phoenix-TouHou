@@ -1,0 +1,21 @@
+# main_scene.gd
+func parse_line(line: String):
+	var line_info = line.split(":")
+	assert(len(line_info) >= 2)
+	return {
+		"speaker_name": line_info[0],
+		"dialog_line": line_info[1]
+	}
+
+func process_current_line():
+	var line = dialog_lines[dialog_index]
+	var line_info = parse_line(line)
+	var character_name = Character.get_enum_from_string(line_info["speaker_name"])
+	dialog_ui.change_line(character_name, line_info["dialog_line"])
+	character_sprite.change_character(character_name)
+
+func process_current_line():
+	var line = dialog_lines[dialog_index]
+	var character_name = Character.get_enum_from_string(line["speaker"])
+	dialog_ui.change_line(character_name, line["text"])
+	character_sprite.change_character(character_name)

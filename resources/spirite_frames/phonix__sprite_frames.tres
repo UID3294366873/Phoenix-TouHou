@@ -1,0 +1,110 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dugipm46yda05"]
+
+[ext_resource type="Texture2D" uid="uid://8600f2wg7k8o" path="res://assets/spirites/phoenix/confident-idle/frame_0.png" id="1_6jiqy"]
+[ext_resource type="Texture2D" uid="uid://baqe4myvude3r" path="res://assets/spirites/phoenix/idle frames/frame_0_delay-3.5s.png" id="1_75thv"]
+[ext_resource type="Texture2D" uid="uid://jok0dgqcfrrx" path="res://assets/spirites/phoenix/confident-idle/frame_1.png" id="2_kvtk2"]
+[ext_resource type="Texture2D" uid="uid://jvl055cs0qgx" path="res://assets/spirites/phoenix/idle frames/frame_1_delay-0.1s.png" id="2_mrnvx"]
+[ext_resource type="Texture2D" uid="uid://3qoghtbsfmuj" path="res://assets/spirites/phoenix/confident-idle/frame_2.png" id="3_upbxb"]
+[ext_resource type="Texture2D" uid="uid://pgunu44omcdo" path="res://assets/spirites/phoenix/idle frames/frame_2_delay-0.2s.png" id="3_vmm5s"]
+[ext_resource type="Texture2D" uid="uid://byivfdid2phwu" path="res://assets/spirites/phoenix/confident-talking/frame_0.png" id="4_2j2m6"]
+[ext_resource type="Texture2D" uid="uid://bt2ek2twgsrbe" path="res://assets/spirites/phoenix/talking/frame_0_delay-0.2s.png" id="4_i5grq"]
+[ext_resource type="Texture2D" uid="uid://7skqklf2cjfw" path="res://assets/spirites/phoenix/confident-talking/frame_1.png" id="5_g5rfi"]
+[ext_resource type="Texture2D" uid="uid://c2hiyf4uirpcp" path="res://assets/spirites/phoenix/talking/frame_1_delay-0.2s.png" id="5_pxru0"]
+[ext_resource type="Texture2D" uid="uid://c5p5duu6demb8" path="res://assets/spirites/phoenix/talking/frame_2_delay-0.2s.png" id="6_2uxww"]
+[ext_resource type="Texture2D" uid="uid://ddu77n3gmuqpa" path="res://assets/spirites/phoenix/confident-talking/frame_2.png" id="6_upum1"]
+[ext_resource type="Texture2D" uid="uid://0l3swbpk2hvv" path="res://assets/spirites/phoenix/laugh-talking/frame_00.png" id="10_akory"]
+[ext_resource type="Texture2D" uid="uid://wfui6fmhdm6g" path="res://assets/spirites/phoenix/laugh-talking/frame_01.png" id="11_ws8ts"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6jiqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kvtk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_upbxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kvtk2")
+}, {
+"duration": 15.0,
+"texture": ExtResource("1_6jiqy")
+}],
+"loop": 1,
+"name": &"confident-idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2j2m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g5rfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_upum1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g5rfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2j2m6")
+}],
+"loop": 1,
+"name": &"confident-talking",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_75thv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mrnvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vmm5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mrnvx")
+}, {
+"duration": 15.0,
+"texture": ExtResource("1_75thv")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_akory")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ws8ts")
+}],
+"loop": 1,
+"name": &"laugh-talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i5grq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxru0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2uxww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxru0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i5grq")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 7.0
+}]
