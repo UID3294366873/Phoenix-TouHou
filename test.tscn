@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cmo24xow5e7tw"]
+
+[ext_resource type="Script" uid="uid://dvj382kl5vlaf" path="res://StoryRunner.gd" id="1_37kl0"]
+
+[node name="Node2D" type="Node2D" unique_id=149258233]
+script = ExtResource("1_37kl0")
