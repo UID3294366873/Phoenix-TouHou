@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*uid://ddg45h7hwsf5f"
+GodotIQRuntime="*uid://gcpnekwc3g1k"
 
 [display]
 
@@ -26,6 +26,10 @@ window/stretch/mode="canvas_items"
 [editor]
 
 movie_writer/movie_file="D:/projects/godot-projects/a-逆转裁判/Movies/26-8-16/Dialog UI 展示.avi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godotiq/plugin.cfg")
 
 [input]
 

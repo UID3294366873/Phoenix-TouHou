@@ -1,0 +1,35 @@
+[
+  [{"choices": [
+    {"text": "skip", "goto": "end"},
+    {"text": "no skip"}
+  ]}],
+
+  [{"background": "courtroom"}],
+  [{"speaker": "Phoenix"}, {"text": "早上好！今天天气真不错。"}],
+  [{"speaker": "Trucy"}, {"text": "早安！我昨晚睡得很好呢。"}],
+  [{"speaker": "Apollo"}, {"text": "你们早啊。今天有什么安排吗？"}],
+  [{"speaker": "Phoenix"}, {"text": "我想先去喝杯咖啡，然后去公园散步。"}],
+  [{"speaker": "Phoenix"}, {"expression": "confident"}, {"text": "你们要不要一起来？"}],
+
+  [{"choices": [
+    {"text": "来", "goto": "选项一"},
+    {"text": "不来", "goto": "选项二"}
+  ]}],
+
+  [{"speaker": "Trucy"}, {"text": "test"}],
+
+  [{"anchor": "选项一"}],
+  [{"speaker": "Trucy"}, {"expression": "happy"}, {"text": "好呀好呀！我最喜欢去公园了！"}],
+  [{"speaker": "Apollo"}, {"text": "听起来不错，我也一起去吧。"}],
+  [{"speaker": "Trucy"}, {"expression": "confident"}, {"text": "那我们出发吧！"}],
+  [{"speaker": "Phoenix"}, {"expression": "laugh"}, {"text": "好，那我们出发吧！"}],
+  [{"goto": "end"}],
+
+  [{"anchor": "选项二"}],
+  [{"speaker": "Trucy"}, {"expression": "confident"}, {"text": "我还有点事情，不来了"}],
+  [{"speaker": "Phoenix"}, {"expression": "confident"}, {"text": "没关系，下次再约。"}],
+
+  [{"anchor": "end"}],
+  [{"speaker": "Trucy"}, {"expression": "happy"}, {"text": "END"}],
+  [{"jump": "res://content/story/second_scene.json"}]
+]

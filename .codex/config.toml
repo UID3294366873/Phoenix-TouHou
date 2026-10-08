@@ -1,0 +1,5 @@
+[mcp_servers.godotiq]
+command = "D:\\projects\\godot-project\\.tools\\godotiq\\Scripts\\godotiq.exe"
+
+[mcp_servers.godotiq.env]
+GODOTIQ_PROJECT_ROOT = "D:\\projects\\godot-project\\test2\\Phoenix-TouHou"

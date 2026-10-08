@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bmhetpdclx3co"]
+
+[ext_resource type="Script" uid="uid://dilb48td24e7o" path="res://app/story/story_scene.gd" id="1_pu3yx"]
+[ext_resource type="Texture2D" uid="uid://dahrmuexyyq5o" path="res://assets/images/courtroom.png" id="2_gubc5"]
+[ext_resource type="AudioStream" uid="uid://6ya4i0ljlwr4" path="res://resources/blip_sounds/sfx-dink.wav" id="2_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://dq3sc1pxlc2oi" path="res://features/dialogue/presentation/character/character_view.tscn" id="3_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://c5bg4pih04ipo" path="res://features/dialogue/presentation/ui/dialogue_ui.tscn" id="4_c16ls"]
+[ext_resource type="Script" uid="uid://dt4uuknldbocm" path="res://features/dialogue/presentation/story_presenter.gd" id="5_presenter"]
+[ext_resource type="Script" uid="uid://yekxqb30hn24" path="res://features/dialogue/runtime/dialogue_runner.gd" id="6_runner"]
+[ext_resource type="PackedScene" path="res://features/dialogue/presentation/transition/transition_layer.tscn" id="7_transition"]
+
+[node name="StoryScene" type="Node" unique_id=294691437]
+script = ExtResource("1_pu3yx")
+
+[node name="Runtime" type="Node" parent="." unique_id=197608030]
+
+[node name="DialogueRunner" type="Node" parent="Runtime" unique_id=1012757734]
+unique_name_in_owner = true
+script = ExtResource("6_runner")
+
+[node name="Presentation" type="Node" parent="." unique_id=774619122]
+
+[node name="StoryPresenter" type="Node" parent="Presentation" unique_id=1898889511]
+unique_name_in_owner = true
+script = ExtResource("5_presenter")
+
+[node name="NextSentenceSound" type="AudioStreamPlayer" parent="Presentation" unique_id=2066443756]
+unique_name_in_owner = true
+stream = ExtResource("2_rt2n2")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="Presentation" unique_id=1360112692]
+layer = -1
+
+[node name="BackgroundView" type="TextureRect" parent="Presentation/BackgroundLayer" unique_id=780740081]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gubc5")
+
+[node name="CharacterUILayer" type="CanvasLayer" parent="Presentation" unique_id=346307425]
+
+[node name="CharacterAnchor" type="Control" parent="Presentation/CharacterUILayer" unique_id=1934235808]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharacterView" parent="Presentation/CharacterUILayer/CharacterAnchor" unique_id=1935932476 instance=ExtResource("3_rt2n2")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(4, -259)
+scale = Vector2(1.5, 1.5)
+
+[node name="DialogueUI" parent="Presentation/CharacterUILayer" unique_id=1214269744 instance=ExtResource("4_c16ls")]
+unique_name_in_owner = true
+
+[node name="TransitionLayer" parent="Presentation" unique_id=1586628019 instance=ExtResource("7_transition")]
+unique_name_in_owner = true

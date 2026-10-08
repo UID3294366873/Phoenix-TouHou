@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://features/dialogue/presentation/transition/transition_layer.gd" id="1_fs1md"]
+
+[node name="TransitionLayer" type="CanvasLayer" unique_id=982599913]
+script = ExtResource("1_fs1md")
+
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=1558890500]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
